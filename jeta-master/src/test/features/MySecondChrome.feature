@@ -1,4 +1,4 @@
-@first @second
+@second
 Feature: Simple checks in "Demo Web Shop" site
 
   Scenario: Check site title

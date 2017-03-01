@@ -1,10 +1,10 @@
-@first
-Feature: Simple checks in "Selenium Simplified" site
+@first @second
+Feature: Simple checks in "Demo Web Shop" site
 
   #http://demowebshop.tricentis.com/
   Scenario: Check site title
-    Given I navigate to site "http://seleniumsimplified.com"
-    Then Site title is "Selenium Simplified"
+    Given I navigate to site "http://demowebshop.tricentis.com/"
+    Then Site title is "Demo Web Shop"
 
   Scenario: Teardown
     Given Driver closed and quited
