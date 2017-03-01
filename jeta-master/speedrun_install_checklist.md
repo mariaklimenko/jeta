@@ -57,7 +57,7 @@ This has a simple pom.xml and a basic test to run tagged with @first
 *  Download the zip file and unzip somewhere
 *  Run your first test from the command line
     *  Use the command line to "cd" to the project directory (where you unarchived the source code to)
-    *  mvn test -Dcucumber.options="src/test/features —glue com.jeta.webdriver —tags @first"
+    *  mvn test -Dcucumber.options="--tags @first"
     
 If it runs successfully then you have Java and Maven Installed in Windows.
 

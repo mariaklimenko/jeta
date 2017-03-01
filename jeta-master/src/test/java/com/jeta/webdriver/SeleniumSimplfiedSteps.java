@@ -27,5 +27,7 @@ public class SeleniumSimplfiedSteps {
     public void checkSiteTitle (String title) throws Throwable {
         String realTitle = driver.getTitle();
         Assert.assertTrue("Expected titile is " + title + ", while real title value is " + realTitle, realTitle.startsWith(title));
+        driver.close();
+        driver.quit();
     }
 }

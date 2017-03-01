@@ -8,9 +8,17 @@
     <artifactId>JavaIntelliJMavenSelenium</artifactId>
     <version>1.0</version>
 
-    <dependencies>
+    <!-- <build>
+         <resources>
+             <resource>
+                 <directory>src/test</directory>
+             </resource>
+         </resources>
+     </build> -->
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+     <dependencies>
+
+         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
