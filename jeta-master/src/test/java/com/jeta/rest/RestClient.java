@@ -13,7 +13,7 @@ import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
  */
 class RestClient {
 
-    static ClientResponse getResponse(String url, String content_type) {
+    static ClientResponse getJSONResponse(String url, String content_type) {
         ClientConfig config = new DefaultClientConfig();
         config.getClasses().add(JacksonJaxbJsonProvider.class);
         config.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);

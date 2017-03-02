@@ -13,12 +13,13 @@ import java.util.List;
  * Created by yksenofontov on 01.03.2017.
  */
 public class RestSteps {
+    final static String json_content_type = "application/json";
     private static ClientResponse response;
 
     @When("^Get request, url = \"(.*?)\", code \"(.*?)\"$")
     public void getRequest(String url, String code) throws Throwable {
 //        easy way to make GET request
-        response = RestClient.getResponse(url,"application/json");
+        response = RestClient.getJSONResponse(url,json_content_type);
         Assert.assertTrue("Expected response code is " + code + ", while real code is " + response.getStatus(), code.equals(Integer.toString(response.getStatus())));
     }
 
