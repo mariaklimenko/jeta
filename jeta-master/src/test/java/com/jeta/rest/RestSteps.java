@@ -13,6 +13,8 @@ import java.util.List;
  * Created by yksenofontov on 01.03.2017.
  */
 public class RestSteps {
+
+
     final static String json_content_type = "application/json";
     private static ClientResponse response;
 

@@ -1,5 +1,7 @@
 package com.jeta.webdriver;
 
+import com.jeta.json.JsonConverter;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,10 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 
 public class SeleniumSimpleDemoSteps {
+
+    private final static Logger logger = Logger.getLogger(SeleniumSimpleDemoSteps.class);
     private WebDriver driver = new ChromeDriver();
 
     @Given("^Driver closed and quited$")
     public void driver_closed_and_quited() throws Throwable {
+        logger.info("Close browser");
         driver.close();
         driver.quit();
     }
