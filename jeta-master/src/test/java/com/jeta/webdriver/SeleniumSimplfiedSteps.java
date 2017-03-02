@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 /**
  * Created by mariaklimenko on 25.02.2017.
  */
+
 public class SeleniumSimplfiedSteps {
     private WebDriver driver = new ChromeDriver();
 
