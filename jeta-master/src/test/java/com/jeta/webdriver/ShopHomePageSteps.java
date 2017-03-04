@@ -4,6 +4,7 @@ import org.junit.Assert;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -27,7 +28,10 @@ public class ShopHomePageSteps {
 
     @Given("^I navigate to site Demo Shop$")
     public void i_navigate_to_site_demo_shop() throws Throwable {
-        driver.get(PAGE_URL);
+      //  driver.get(PAGE_URL);
+        driver.navigate().to(PAGE_URL);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[1]/div[1]/a/img"));
     }
 
     @When("^I click header link Login$")
