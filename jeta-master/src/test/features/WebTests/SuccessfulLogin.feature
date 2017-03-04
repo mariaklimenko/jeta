@@ -1,4 +1,4 @@
-@WebTestExamples
+@WebTests
 Feature: Check successful login scenario on "Demo Web Shop"
 
   Scenario: Open "Login Page" on site "Demo Web Shop"
@@ -9,4 +9,4 @@ Feature: Check successful login scenario on "Demo Web Shop"
   Scenario: Login as user Mary Black
     Given I enter credentials for mary_black
     When I click Login button
-    Then I logged as MaryBlack
+    Then I logged as mary_black

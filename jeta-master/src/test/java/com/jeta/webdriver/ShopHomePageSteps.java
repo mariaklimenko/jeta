@@ -6,17 +6,19 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by mariaklimenko on 25.02.2017.
  */
 
 public class ShopHomePageSteps {
-    private final WebDriver driver;
     private ShopHomePage homePage;
 
     //Page URL
     private static String PAGE_URL="http://demowebshop.tricentis.com/";
 
+    private static WebDriver driver;
     //Constructor
     public ShopHomePageSteps(SharedDriver driver){
        this.driver=driver;
@@ -40,7 +42,7 @@ public class ShopHomePageSteps {
         Assert.assertTrue("Expected account name is " + expectedTitle + ", while actual account value is " + actualTitle, actualTitle.equals(expectedTitle));
     }
 
-    @Then("^I logged as MaryBlack$")
+    @Then("^I logged as mary_black$")
     public void i_logged_as_correct_user() throws Throwable {
         String expectedTitle = "maryblack12345@gmail.com";
         String actualTitle = homePage.getUserAccount();

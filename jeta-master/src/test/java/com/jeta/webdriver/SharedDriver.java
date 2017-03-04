@@ -4,14 +4,15 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
+import java.util.function.Function;
 
 /**
  * Created by mariaklimenko on 02.03.2017.
@@ -19,10 +20,10 @@ import java.io.File;
 
 public class SharedDriver extends EventFiringWebDriver {
 
-    private final static Logger logger = Logger.getLogger(SharedDriver.class);
+    private static Logger logger = Logger.getLogger(SharedDriver.class);
 
     // create webdriver for test run, use browser received from VM options (if not specified then Chrome will be used by default)
-    private static final WebDriver REAL_DRIVER = WebDriverFactory.createInstance(System.getProperty("browser", "chrome"));
+    private static WebDriver REAL_DRIVER = WebDriverFactory.createInstance(System.getProperty("browser", "chrome"));
   /* private static WebDriver REAL_DRIVER = new EdgeDriver(); */
 
     private static final Thread CLOSE_THREAD = new Thread() {
@@ -64,4 +65,17 @@ public class SharedDriver extends EventFiringWebDriver {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());
         }
     }
+
+   /* public static void waitForPageLoad() {
+        Wait<WebDriver> wait = new WebDriverWait(REAL_DRIVER, 30);
+        wait.until(new Function<WebDriver, Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                System.out.println("Current Window State       : "
+                        + String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState")));
+                return String
+                        .valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState"))
+                        .equals("complete");
+            }
+        });
+    } */
 }

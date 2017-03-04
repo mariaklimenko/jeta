@@ -1,4 +1,4 @@
-@first @WebTestExamples
+@first @WebTests
 Feature: Simple checks in "Demo Web Shop" site
 
   #http://demowebshop.tricentis.com/
