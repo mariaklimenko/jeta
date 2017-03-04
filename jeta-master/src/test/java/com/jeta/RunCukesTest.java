@@ -1,3 +1,5 @@
+package com.jeta;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -7,6 +9,5 @@ import org.junit.runner.RunWith;
         features = "src/test/features",
         glue = "com.jeta.webdriver"
 )
-
 public class RunCukesTest {
 }
