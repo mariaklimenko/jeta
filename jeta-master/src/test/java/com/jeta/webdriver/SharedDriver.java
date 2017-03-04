@@ -50,7 +50,7 @@ public class SharedDriver extends EventFiringWebDriver {
         super.close();
     }
 
-    @Before
+  //  @Before
     public void deleteAllCookies() {
         manage().deleteAllCookies();
     }

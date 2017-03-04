@@ -18,7 +18,6 @@ public class ShopHomePage {
 
     private final WebDriver driver;
 
-    private WebElement myDynamicElement;
     //Locators
     //Log in link on home page header
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
@@ -52,7 +51,7 @@ public class ShopHomePage {
         logger.info("link text: " + header_link_login.getText());
         header_link_login.click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        myDynamicElement = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[1]/h1"));
+        driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[1]/h1"));
     }
 
     public String getPageTitle(){
