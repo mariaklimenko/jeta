@@ -1,7 +1,7 @@
 Easy testing automation solution in Java, Maven, Cucumber and Selenium WebDriver and more
 ===========================
 
-This simple project demonstrates Web UI test automation solution written in Java, Maven, Cucumber and Selenium WebDriver including cross browser testing support. We leverage powerful open-source libraries and tools to build automation testing framework which is easy to setup and maintain even for newbies in Java world.
+This simple project demonstrates Web UI test automation solution written in **Java**, **Maven**, **Cucumber** and **Selenium WebDriver** including cross browser testing support. We leverage powerful open-source libraries and tools to build automation testing framework which is easy to setup and maintain even for newbies in Java world.
 
 We use [WebDriverManager](https://github.com/bonigarcia/webdrivermanager) which currently supports management of **Chrome**, **Opera**, **Internet Explorer**,**Microsoft Edge**, **PhantomJS**, and **Firefox**.
 
