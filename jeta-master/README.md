@@ -5,7 +5,7 @@ This simple project demonstrates Web UI test automation solution written in **Ja
 
 We use [WebDriverManager](https://github.com/bonigarcia/webdrivermanager) which currently supports management of **Chrome**, **Opera**, **Internet Explorer**,**Microsoft Edge**, **PhantomJS**, and **Firefox**.
 
-In addition to that there is **REST API** testing support with future aim to leverage [Rest Assured](https://github.com/rest-assured/rest-assured) in near future
+In addition to that there is **REST API** testing support with aim to leverage [Rest Assured](https://github.com/rest-assured/rest-assured) in near future
 
 In future we also plan to show here how to auto test **JMS**, **JMX**, **RMI**, **JDBC** and more. For example, [WireMock](https://github.com/tomakehurst/wiremock) for mocking HTTP-based APIs or [Jackson](https://github.com/FasterXML/jackson) for data-driven test approach.
 
