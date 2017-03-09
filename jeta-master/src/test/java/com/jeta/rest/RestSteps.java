@@ -71,7 +71,7 @@ public class RestSteps {
 
     @Given("^Use file \"(.*?)\" as comment template$")
     public void useFileAsTemplate(String filename) throws Throwable {
-        comment = getCommentBasedOnFile("jeta-master\\src\\resources\\templates\\" + filename);
+        comment = getCommentBasedOnFile("src\\resources\\templates\\" + filename);
     }
 
     @When("^Response contains \"(.*?)\" comments$")

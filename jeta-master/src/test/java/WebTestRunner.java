@@ -4,9 +4,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/features",
+        features = "src/test/features/WebTestExamples",
         glue = "com.jeta.webdriver"
 )
 
-public class RunCukesTest {
+public class WebTestRunner {
+
 }
