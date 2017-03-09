@@ -85,13 +85,26 @@
             <version>2.8.0</version>
         </dependency>
 
-        <!-- configuration management -->
-        <dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>1.6</version>
-        </dependency>
+         <!-- configuration management -->
+         <dependency>
+             <groupId>commons-configuration</groupId>
+             <artifactId>commons-configuration</artifactId>
+             <version>1.6</version>
+         </dependency>
 
-    </dependencies>
+         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+         <dependency>
+             <groupId>io.github.bonigarcia</groupId>
+             <artifactId>webdrivermanager</artifactId>
+             <version>1.6.0</version>
+         </dependency>
 
-</project>
+         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+         <dependency>
+             <groupId>com.google.guava</groupId>
+             <artifactId>guava</artifactId>
+             <version>21.0</version>
+         </dependency>
+     </dependencies>
+
+ </project>
