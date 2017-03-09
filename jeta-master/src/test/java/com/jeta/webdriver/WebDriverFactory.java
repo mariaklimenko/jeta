@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -16,7 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  */
 
 public class WebDriverFactory {
-    private final static Logger logger = Logger.getLogger(SharedDriver.class);
+    private final static Logger logger = Logger.getLogger(WebDriverFactory.class);
 
     public static WebDriver createInstance(String browserName){
         WebDriver driver;
