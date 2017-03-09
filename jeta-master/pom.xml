@@ -8,6 +8,13 @@
     <artifactId>JavaIntelliJMavenSelenium</artifactId>
     <version>1.0</version>
 
+    <repositories>
+        <repository>
+            <id>repository.jboss.org-public</id>
+            <name>JBoss.org Maven repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
     <!-- <build>
          <resources>
              <resource>
@@ -103,7 +110,21 @@
              <groupId>com.google.guava</groupId>
              <artifactId>guava</artifactId>
              <version>21.0</version>
-         </dependency>       
+         </dependency>
+
+         <!-- https://mvnrepository.com/artifact/javax.jms/jms -->
+         <dependency>
+             <groupId>javax.jms</groupId>
+             <artifactId>jms</artifactId>
+             <version>1.1</version>
+         </dependency>
+
+         <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-all -->
+         <dependency>
+             <groupId>org.apache.activemq</groupId>
+             <artifactId>activemq-all</artifactId>
+             <version>5.14.3</version>
+         </dependency>
      </dependencies>
 
  </project>
