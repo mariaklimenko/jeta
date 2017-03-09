@@ -9,4 +9,8 @@ public class Comment {
     public String name;
     public String email;
     public String body;
+
+    public boolean equals(Comment comment){
+        return this.postId == comment.postId && this.name.equals(comment.name) && this.email.equals(comment.email) && this.body.equals(comment.body);
+    }
 }
