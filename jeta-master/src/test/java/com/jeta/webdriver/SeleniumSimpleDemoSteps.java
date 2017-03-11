@@ -1,14 +1,10 @@
 package com.jeta.webdriver;
 
-import com.jeta.RunCukesTest;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by mariaklimenko on 25.02.2017.
@@ -17,11 +13,13 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumSimpleDemoSteps {
 
     private final static Logger logger = Logger.getLogger(SeleniumSimpleDemoSteps.class);
+    private SeleniumDriver selenium;
     private WebDriver driver;
 
     //Constructor
-    public SeleniumSimpleDemoSteps(SharedDriver driver){
-        this.driver=driver;
+    public SeleniumSimpleDemoSteps(SeleniumDriver selenium){
+        this.selenium = selenium.getInstance();
+        this.driver=selenium.getDriver();
     }
 
     @Given("^I navigate to site \"(.*?)\"$")

@@ -35,18 +35,8 @@ public class WebDriverFactory {
                 break;
             case IE:
                 DesiredCapabilities dc = new DesiredCapabilities();
-             //   logger.info("IE_ENSURE_CLEAN_SESSION");
-            //   dc.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-              //  logger.info("ENABLE_PERSISTENT_HOVERING");
-              //  dc.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING,false);
-                //logger.info("REQUIRE_WINDOW_FOCUS");
-               // dc.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, false);
-               // logger.info("UNEXPECTED_ALERT_BEHAVIOR");
-              //  dc.setCapability(InternetExplorerDriver.UNEXPECTED_ALERT_BEHAVIOR, true);
-               // logger.info("ACCEPT_SSL_CERTS");
-             //   dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                dc.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
                 dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-              //  dc.setJavascriptEnabled(true);
                 InternetExplorerDriverManager.getInstance().setup();
                 driver = new InternetExplorerDriver(dc);
                 break;
