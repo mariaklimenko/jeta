@@ -66,13 +66,13 @@ public class RestSteps {
 
     @Given("^Generate new name, length \"(.*?)\" for comment template$")
     public void generateNameForCommentTemplate(String length) throws Throwable {
-        comment.name = DataGenerator.generateString(Integer.parseInt(length));
+        comment.setName(DataGenerator.generateString(Integer.parseInt(length)));
     }
 
     @Given("^Use file \"(.*?)\" as comment template$")
     public void useFileAsTemplate(String filename) throws Throwable {
-        comment = getCommentBasedOnFile("./templates/" + filename);
-        Assert.assertNull("Loaded comment template should not be null", comment);
+        comment = getCommentBasedOnFile("src/test/resources/templates/" + filename);
+        Assert.assertNotNull("Loaded comment template should not be null", comment);
     }
 
     @When("^Response contains \"(.*?)\" comments$")

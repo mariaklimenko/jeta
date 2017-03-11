@@ -5,6 +5,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.GenericType;
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class JsonConverter {
     private final static Logger logger = Logger.getLogger(JsonConverter.class);
-    private final static ObjectMapper mapper = new ObjectMapper();
+    private static ObjectMapper mapper = new ObjectMapper();
 
     public static List<Comment> convertResponseToComments(ClientResponse response) {
         logger.info("Convert response to List<Comment>");
@@ -32,6 +33,8 @@ public class JsonConverter {
     public static Comment getCommentBasedOnFile(String filename) {
         ObjectMapper mapper = new ObjectMapper();
         File json_file = new File(filename);
+        logger.info(json_file.getAbsolutePath().toString());
+
         Comment comment = null;
         try {
             comment = mapper.readValue(json_file, Comment.class);
