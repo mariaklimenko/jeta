@@ -14,9 +14,10 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class ShopHomePage {
-    private final static Logger logger = Logger.getLogger(SharedDriver.class);
+    private final static Logger logger = Logger.getLogger(SeleniumDriver.class);
 
-    private final WebDriver driver;
+    private SeleniumDriver selenium;
+    private WebDriver driver;
 
     //Locators
     //Log in link on home page header
@@ -41,9 +42,9 @@ public class ShopHomePage {
     private WebElement login_btn;
 
     //Constructor
-    public ShopHomePage(SharedDriver driver){
-        this.driver = driver;
-        //Initialise Elements
+    public ShopHomePage(SeleniumDriver selenium){
+        this.selenium = selenium.getInstance();
+        this.driver=selenium.getDriver();
         PageFactory.initElements(driver, this);
     }
 

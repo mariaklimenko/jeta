@@ -20,9 +20,11 @@ public class ShopHomePageSteps {
     private static String PAGE_URL="http://demowebshop.tricentis.com/";
 
     private static WebDriver driver;
+    private static SeleniumDriver selenium;
     //Constructor
-    public ShopHomePageSteps(SharedDriver driver){
-       this.driver=driver;
+    public ShopHomePageSteps(SeleniumDriver driver){
+        this.selenium = selenium.getInstance();
+        this.driver=selenium.getDriver();
        homePage = new ShopHomePage(driver);
     }
 
