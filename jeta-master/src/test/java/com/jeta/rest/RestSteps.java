@@ -24,7 +24,7 @@ import static com.jeta.json.JsonConverter.getCommentBasedOnFile;
 public class RestSteps {
     private final static Logger logger = Logger.getLogger(SeleniumSimpleDemoSteps.class);
     private static Comment comment;
-    private final static String CONFIG_FILE = "src\\resources\\config.properties";
+    private final static String CONFIG_FILE = "./config.properties";
     private final static String JSON_CONTENT_TYPE = "application/json";
     private static ClientResponse response;
     private static CompositeConfiguration config;
@@ -71,7 +71,8 @@ public class RestSteps {
 
     @Given("^Use file \"(.*?)\" as comment template$")
     public void useFileAsTemplate(String filename) throws Throwable {
-        comment = getCommentBasedOnFile("jeta-master\\src\\resources\\templates\\" + filename);
+        comment = getCommentBasedOnFile("./templates/" + filename);
+        Assert.assertNull("Loaded comment template should not be null", comment);
     }
 
     @When("^Response contains \"(.*?)\" comments$")
