@@ -44,5 +44,4 @@ class RestClient {
         WebResource webResource = getWebResource(url,config,content_type);
         return webResource.accept(content_type).post(ClientResponse.class,body);
     }
-
 }

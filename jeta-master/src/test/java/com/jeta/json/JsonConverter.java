@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by yksenofontov on 02.03.2017.
+ * Created by yksenofontov on 02.03.2017
  */
 public class JsonConverter {
     private final static Logger logger = Logger.getLogger(JsonConverter.class);
