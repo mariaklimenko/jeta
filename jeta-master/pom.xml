@@ -32,6 +32,13 @@
             <version>3.2.0</version>
         </dependency>
 
+         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+         <dependency>
+             <groupId>org.seleniumhq.selenium</groupId>
+             <artifactId>selenium-support</artifactId>
+             <version>3.4.0</version>
+         </dependency>
+
          <dependency>
              <groupId>io.rest-assured</groupId>
              <artifactId>rest-assured</artifactId>
