@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit;
  * Created by mariaklimenko on 25.02.2017.
  */
 
-public class ShopHomePageSteps {
-    private ShopHomePage homePage;
+public class SeleniumShopHomePageSteps {
+    private SeleniumShopHomePageObject homePage;
 
     //Page URL
     private static String PAGE_URL="http://demowebshop.tricentis.com/";
@@ -22,10 +22,10 @@ public class ShopHomePageSteps {
     private static WebDriver driver;
     private static SeleniumDriver selenium;
     //Constructor
-    public ShopHomePageSteps(SeleniumDriver driver){
+    public SeleniumShopHomePageSteps(SeleniumDriver driver){
         this.selenium = selenium.getInstance();
         this.driver=selenium.getDriver();
-       homePage = new ShopHomePage(driver);
+       homePage = new SeleniumShopHomePageObject(driver);
     }
 
     @Given("^I navigate to site Demo Shop$")

@@ -116,7 +116,7 @@
          <dependency>
              <groupId>io.github.bonigarcia</groupId>
              <artifactId>webdrivermanager</artifactId>
-             <version>1.6.0</version>
+             <version>1.6.2</version>
          </dependency>
 
          <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
@@ -152,6 +152,14 @@
              <groupId>org.assertj</groupId>
              <artifactId>assertj-core</artifactId>
              <version>3.6.2</version>
+         </dependency>
+
+
+         <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+         <dependency>
+             <groupId>com.codeborne</groupId>
+             <artifactId>selenide</artifactId>
+             <version>4.4.3</version>
          </dependency>
 
      </dependencies>
