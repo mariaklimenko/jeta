@@ -22,9 +22,12 @@
              </resource>
          </resources>
      </build> -->
-
-     <dependencies>
-
+    <properties>
+        <!-- Needed for allure-maven-plugin to specify report version -->
+        <allure.version>1.5.2</allure.version>
+        <aspectj.version>1.8.4</aspectj.version>
+    </properties>
+    <dependencies>
          <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -154,7 +157,6 @@
              <version>3.6.2</version>
          </dependency>
 
-
          <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
          <dependency>
              <groupId>com.codeborne</groupId>
@@ -162,5 +164,48 @@
              <version>4.4.3</version>
          </dependency>
 
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-cucumber-jvm-adaptor</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
      </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                        -Dcucumber.options="--plugin ru.yandex.qatools.allure.cucumberjvm.AllureReporter"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>ru.yandex.qatools.allure</groupId>
+                <artifactId>allure-maven-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
  </project>
