@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * Created by mariaklimenko on 25.02.2017.
  */
 
-public class ShopHomePage {
+public class SeleniumShopHomePageObject {
     private final static Logger logger = Logger.getLogger(SeleniumDriver.class);
 
     private SeleniumDriver selenium;
@@ -42,7 +42,7 @@ public class ShopHomePage {
     private WebElement login_btn;
 
     //Constructor
-    public ShopHomePage(SeleniumDriver selenium){
+    public SeleniumShopHomePageObject(SeleniumDriver selenium){
         this.selenium = selenium.getInstance();
         this.driver=selenium.getDriver();
         PageFactory.initElements(driver, this);
