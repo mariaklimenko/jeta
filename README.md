@@ -1,3 +1,5 @@
+!!! This project is outdated. New version is here: https://github.com/mariaklimenko/sample-test-automation !!!
+
 Easy testing automation solution in Java, Maven, Cucumber and Selenium WebDriver and more
 ===========================
 
